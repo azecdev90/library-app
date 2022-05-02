@@ -6,7 +6,7 @@
 
 
 
-<h1> Create Author </h1>
+<h1> Update Author </h1>
 
 <form action="{{ route('authors.update', $author->id )}}" method="POST">
     @method('PATCH')
