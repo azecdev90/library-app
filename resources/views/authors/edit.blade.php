@@ -14,7 +14,7 @@
 
     <div>
     <label for="name">Name:</label>
-         <input type="text" name="name" value="{{ $book->name }}">
+         <input type="text" name="name" value="{{ $author->name }}">
     </div>
 
     <div>
