@@ -36,7 +36,17 @@ class AuthorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'country' =>'required',
+            'genre' => 'required'
+        ]);
+
+        $author = new Author;
+        $author->name = $request->name;
+        $author->country = $request->country;
+        $author->genre = $request->genre;
+        $author->save();
     }
 
     /**
