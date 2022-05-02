@@ -81,8 +81,17 @@ class AuthorController extends Controller
      */
     public function update(Request $request, Author $author)
     {
-        //
-    }
+        $request->validate([
+                'name' =>'required',
+                'country' => 'required',
+                'genre' => 'required',
+        ]);
+
+        $author->name = $request->name;
+        $author->country = $request->country;
+        $author->genre = $request->genre;
+        $author->save();
+     }
 
     /**
      * Remove the specified resource from storage.
